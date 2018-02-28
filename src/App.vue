@@ -1,45 +1,40 @@
 <template>
-  <div class="todo-container">
-    <div class="todo-wrap">
-      <ToDoHeader/>
-      <ToDoMain :todos="todos"/>
-      <ToDoFooter/>
+  <div>
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="page-header"><h2>Router Basic - 01</h2></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-2">
+        <div class="list-group">
+          <!--路由链接: router-link-->
+          <router-link class="list-group-item" to="/about">About</router-link>
+          <router-link class="list-group-item" to="/home">Home</router-link>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="panel">
+          <div class="panel-body">
+            <!--路由视图: router-view 显示当前路由组件-->
+            <router-view ></router-view>
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Header from './components/Header'
-  import Main from './components/Main'
-  import Footer from './components/Footer'
-    export default {
-        //初始化数据
-      data(){
-        return{
-            todos:[
-              {title:'吃饭',completed:false},
-              {title:'睡觉',completed:true},
-              {title:'打代码',completed:false}
-            ]
-        }
-      },
-        components:{
-          ToDoHeader:Header,
-          ToDoMain:Main,
-          ToDoFooter:Footer
-        }
-    }
+
+  export default {
+
+  }
 </script>
 
 <style>
-  .todo-container {
-    width: 600px;
-    margin: 0 auto;
-  }
-  .todo-container .todo-wrap {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
 
 </style>
+

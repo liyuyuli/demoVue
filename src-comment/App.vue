@@ -23,6 +23,7 @@
 //引入组件
   import Add from './components/Add'
   import List from './components/List'
+
     export default {
     //初始化数据
       data(){
@@ -52,6 +53,6 @@
     }
 </script>
 
-<style scoped>
+<style>
 
 </style>
